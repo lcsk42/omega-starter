@@ -34,6 +34,7 @@
 
     <modules>
         <module>omega-starter-dependencies</module>
+        <module>omega-starter-core</module>
     </modules>
 
     <properties>
