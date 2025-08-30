@@ -78,6 +78,14 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Omega Starter 版本 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-starter-bom</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <!-- TTL: 增强版的线程本地变量（ThreadLocal），支持在线程池或异步任务间安全传递上下文数据，解决传统 ThreadLocal 在跨线程复用时的值丢失问题  -->
             <dependency>

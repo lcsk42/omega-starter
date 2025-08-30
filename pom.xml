@@ -34,7 +34,9 @@
 
     <modules>
         <module>omega-starter-dependencies</module>
+        <module>omega-starter-bom</module>
         <module>omega-starter-core</module>
+        <module>omega-starter-json</module>
     </modules>
 
     <properties>
