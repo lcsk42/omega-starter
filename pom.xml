@@ -39,6 +39,7 @@
         <module>omega-starter-json</module>
         <module>omega-starter-api-doc</module>
         <module>omega-starter-validation</module>
+        <module>omega-starter-web</module>
     </modules>
 
     <properties>

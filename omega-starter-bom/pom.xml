@@ -50,6 +50,13 @@
                 <artifactId>omega-starter-validation</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- Web 模块 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
