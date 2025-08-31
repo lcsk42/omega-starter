@@ -1,1 +1,1 @@
-com.lcsk42.starter.core.ApplicationContextHolder
+com.lcsk42.starter.core.config.CoreAutoConfiguration

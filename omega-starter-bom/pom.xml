@@ -36,6 +36,13 @@
                 <artifactId>omega-starter-json-jackson</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- 接口文档模块 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-starter-api-doc</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

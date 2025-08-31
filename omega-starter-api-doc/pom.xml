@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lcsk42</groupId>
+        <artifactId>omega-starter</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>omega-starter-api-doc</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>Omega Starter 文档模块</description>
+
+    <dependencies>
+        <!-- 核心模块 -->
+        <dependency>
+            <groupId>com.lcsk42</groupId>
+            <artifactId>omega-starter-core</artifactId>
+        </dependency>
+
+        <!-- Knife4j: 是基于 Swagger 的增强 API 文档工具，提供更美观的 UI 和调试功能 -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -37,6 +37,7 @@
         <module>omega-starter-bom</module>
         <module>omega-starter-core</module>
         <module>omega-starter-json</module>
+        <module>omega-starter-api-doc</module>
     </modules>
 
     <properties>

@@ -12,7 +12,13 @@ import org.springframework.context.annotation.Primary;
 
 import java.util.concurrent.Executor;
 
-public class ApplicationCoreAutoConfiguration {
+public class CoreAutoConfiguration {
+
+    @Bean
+    public ApplicationProperties applicationProperties() {
+        return new ApplicationProperties();
+    }
+
     /**
      * 创建 ApplicationContextHolder bean（当不存在时）。
      *
