@@ -71,7 +71,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>lcsk42-dependencies</artifactId>
+                <artifactId>omega-starter-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
