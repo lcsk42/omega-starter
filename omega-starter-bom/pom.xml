@@ -43,6 +43,13 @@
                 <artifactId>omega-starter-api-doc</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- 验证模块 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-starter-validation</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

@@ -38,6 +38,7 @@
         <module>omega-starter-core</module>
         <module>omega-starter-json</module>
         <module>omega-starter-api-doc</module>
+        <module>omega-starter-validation</module>
     </modules>
 
     <properties>
