@@ -1,19 +1,12 @@
 package com.lcsk42.starter.web.config;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
+import com.lcsk42.starter.web.GlobalExceptionHandler;
+import com.lcsk42.starter.web.GlobalResultHandler;
+import com.lcsk42.starter.web.initialize.InitializeDispatcherServletController;
+import com.lcsk42.starter.web.initialize.InitializeDispatcherServletHandler;
+import com.lcsk42.starter.web.initialize.PortHolder;
+import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -21,23 +14,19 @@ import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-
 /**
- * Web Auto Configuration class that sets up common web-related beans and utilities.
+ * Web 自动化配置类，用于设置通用的 web 相关 bean 和工具组件。
  */
+@Slf4j
 public class WebAutoConfiguration {
 
     /**
-     * DispatcherServlet initialization endpoint path.
+     * DispatcherServlet 初始化端点路径。
      */
     public static final String INITIALIZE_PATH = "/initialize/dispatcher-servlet";
 
     /**
-     * Global exception handler to intercept all controller-level exceptions.
+     * 全局异常处理器，用于拦截所有控制器级别的异常。
      */
     @Bean
     @ConditionalOnMissingBean
@@ -46,7 +35,7 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * Global result handler to unify API response format.
+     * 全局结果处理器，用于统一 API 响应格式。
      */
     @Bean
     @ConditionalOnMissingBean
@@ -55,7 +44,7 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * Initializes a lightweight controller used to trigger DispatcherServlet early.
+     * 初始化轻量级控制器，用于提前触发 DispatcherServlet。
      */
     @Bean
     public InitializeDispatcherServletController initializeDispatcherServletController() {
@@ -63,8 +52,8 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * PortHolder bean to hold the web server port.
-     * This is used to initialize the DispatcherServlet early.
+     * PortHolder bean 用于持有 web 服务器端口号。
+     * 用于提前初始化 DispatcherServlet。
      */
     @Bean
     public PortHolder portHolder() {
@@ -72,7 +61,7 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * RestTemplate bean with custom HTTP client factory.
+     * 带有自定义 HTTP 客户端工厂的 RestTemplate bean。
      */
     @Bean
     public RestTemplate simpleRestTemplate(ClientHttpRequestFactory factory) {
@@ -80,8 +69,8 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * Basic ClientHttpRequestFactory with timeout settings.
-     * Improves fault tolerance and responsiveness.
+     * 具备超时设置的基础 ClientHttpRequestFactory。
+     * 提高容错能力和响应能力。
      */
     @Bean
     public ClientHttpRequestFactory simpleClientHttpRequestFactory() {
@@ -92,8 +81,8 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * CommandLineRunner bean to call the DispatcherServlet initialization endpoint
-     * immediately after Spring Boot starts, reducing the first-response latency.
+     * CommandLineRunner bean，用于在 Spring Boot 启动后立即调用 DispatcherServlet 初始化端点，
+     * 减少首次响应延迟。
      */
     @Bean
     public InitializeDispatcherServletHandler initializeDispatcherServletHandler(
@@ -105,10 +94,15 @@ public class WebAutoConfiguration {
     }
 
     /**
-     * Basic WebMvcConfigurer implementation for future extensibility (e.g., CORS, formatters, interceptors).
+     * 基础 WebMvcConfigurer 实现，为未来扩展预留（如 CORS、格式化器、拦截器等）。
      */
     @Bean
     public WebConfiguration webConfig() {
         return new WebConfiguration();
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        log.debug("[Omega Starter] - Auto Configuration 'Web' completed initialization.");
     }
 }

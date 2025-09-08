@@ -21,6 +21,6 @@ public final class InitializeDispatcherServletController {
     @Operation(summary = "Initialize DispatcherServlet", description = "该端点用于初始化 DispatcherServlet，以提升接口的首次响应速度")
     public void initializeDispatcherServlet() {
         // Logs the initialization of the DispatcherServlet.
-        log.info("Initialized the dispatcherServlet to improve the first response time of the interface...");
+        log.info("[Omega Starter] -Initialized the dispatcherServlet to improve the first response time of the interface...");
     }
 }
