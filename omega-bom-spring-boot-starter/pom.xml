@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lcsk42</groupId>
-    <artifactId>omega-starter-bom</artifactId>
+    <artifactId>omega-bom-spring-boot-starter</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -19,42 +19,42 @@
             <!-- 核心基础模块 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-core</artifactId>
+                <artifactId>omega-core-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!-- JSON 模块 - Jackson 核心 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-json-core</artifactId>
+                <artifactId>omega-json-core-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!-- JSON 模块 - Jackson 实现 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-json-jackson</artifactId>
+                <artifactId>omega-json-jackson-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!-- 接口文档模块 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-api-doc</artifactId>
+                <artifactId>omega-api-doc-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!-- 验证模块 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-validation</artifactId>
+                <artifactId>omega-validation-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!-- Web 模块 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-web</artifactId>
+                <artifactId>omega-web-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

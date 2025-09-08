@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lcsk42</groupId>
-        <artifactId>omega-starter</artifactId>
+        <artifactId>omega-spring-boot-starter</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>omega-starter-validation</artifactId>
+    <artifactId>omega-validation-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -18,7 +18,7 @@
         <!-- 核心模块 -->
         <dependency>
             <groupId>com.lcsk42</groupId>
-            <artifactId>omega-starter-core</artifactId>
+            <artifactId>omega-core-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- Spring Boot 校验模块（Hibernate Validator） -->

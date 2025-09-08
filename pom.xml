@@ -4,13 +4,13 @@
 
     <parent>
         <groupId>com.lcsk42</groupId>
-        <artifactId>omega-starter-dependencies</artifactId>
+        <artifactId>omega-dependencies</artifactId>
         <version>${revision}</version>
-        <relativePath>./omega-starter-dependencies</relativePath>
+        <relativePath>./omega-dependencies</relativePath>
     </parent>
 
 
-    <artifactId>omega-starter</artifactId>
+    <artifactId>omega-spring-boot-starter</artifactId>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -33,13 +33,13 @@
     </developers>
 
     <modules>
-        <module>omega-starter-dependencies</module>
-        <module>omega-starter-bom</module>
-        <module>omega-starter-core</module>
-        <module>omega-starter-json</module>
-        <module>omega-starter-api-doc</module>
-        <module>omega-starter-validation</module>
-        <module>omega-starter-web</module>
+        <module>omega-dependencies</module>
+        <module>omega-bom-spring-boot-starter</module>
+        <module>omega-core-spring-boot-starter</module>
+        <module>omega-json-spring-boot-starter</module>
+        <module>omega-api-doc-spring-boot-starter</module>
+        <module>omega-validation-spring-boot-starter</module>
+        <module>omega-web-spring-boot-starter</module>
     </modules>
 
     <properties>
@@ -74,7 +74,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-dependencies</artifactId>
+                <artifactId>omega-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

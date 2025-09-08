@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lcsk42</groupId>
-        <artifactId>omega-starter-json</artifactId>
+        <artifactId>omega-json-spring-boot-starter</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>omega-starter-json-jackson</artifactId>
+    <artifactId>omega-json-jackson-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -31,7 +31,7 @@
 
         <dependency>
             <groupId>com.lcsk42</groupId>
-            <artifactId>omega-starter-json-core</artifactId>
+            <artifactId>omega-json-core-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

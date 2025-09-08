@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lcsk42</groupId>
-        <artifactId>omega-starter</artifactId>
+        <artifactId>omega-spring-boot-starter</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>omega-starter-api-doc</artifactId>
+    <artifactId>omega-api-doc-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -17,7 +17,7 @@
         <!-- 核心模块 -->
         <dependency>
             <groupId>com.lcsk42</groupId>
-            <artifactId>omega-starter-core</artifactId>
+            <artifactId>omega-core-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- Knife4j: 是基于 Swagger 的增强 API 文档工具，提供更美观的 UI 和调试功能 -->

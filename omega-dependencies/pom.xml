@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lcsk42</groupId>
-    <artifactId>omega-starter-dependencies</artifactId>
+    <artifactId>omega-dependencies</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -81,7 +81,7 @@
             <!-- Omega Starter 版本 -->
             <dependency>
                 <groupId>com.lcsk42</groupId>
-                <artifactId>omega-starter-bom</artifactId>
+                <artifactId>omega-bom-spring-boot-starter</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>

@@ -3,25 +3,25 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lcsk42</groupId>
-        <artifactId>omega-starter</artifactId>
+        <artifactId>omega-spring-boot-starter</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>omega-starter-json</artifactId>
+    <artifactId>omega-json-spring-boot-starter</artifactId>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
     <description>Omega Starter JSON 模块</description>
 
     <modules>
-        <module>omega-starter-json-core</module>
-        <module>omega-starter-json-jackson</module>
+        <module>omega-json-core-spring-boot-starter</module>
+        <module>omega-json-jackson-spring-boot-starter</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>com.lcsk42</groupId>
-            <artifactId>omega-starter-core</artifactId>
+            <artifactId>omega-core-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>
