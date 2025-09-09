@@ -57,6 +57,13 @@
                 <artifactId>omega-web-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- Redisson 模块 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-cache-redisson-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

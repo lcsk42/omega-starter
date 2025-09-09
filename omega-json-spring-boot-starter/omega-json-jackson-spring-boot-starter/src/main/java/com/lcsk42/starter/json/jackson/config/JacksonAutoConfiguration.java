@@ -19,8 +19,8 @@ import com.lcsk42.starter.json.jackson.serializer.BaseEnumDeserializer;
 import com.lcsk42.starter.json.jackson.serializer.BaseEnumSerializer;
 import com.lcsk42.starter.json.jackson.serializer.BigNumberSerializer;
 import com.lcsk42.starter.json.jackson.serializer.SimpleDeserializersWrapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -43,17 +43,14 @@ import java.util.TimeZone;
  * @author Jasmine
  * @since 1.0.0
  */
+@Slf4j
+@AllArgsConstructor
 @AutoConfiguration
 @EnableConfigurationProperties(JacksonExtensionProperties.class)
 @PropertySource(value = "classpath:default-json-jackson.yml", factory = GeneralPropertySourceFactory.class)
 public class JacksonAutoConfiguration {
 
-    private static final Logger log = LoggerFactory.getLogger(JacksonAutoConfiguration.class);
     private final JacksonExtensionProperties properties;
-
-    public JacksonAutoConfiguration(JacksonExtensionProperties properties) {
-        this.properties = properties;
-    }
 
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
