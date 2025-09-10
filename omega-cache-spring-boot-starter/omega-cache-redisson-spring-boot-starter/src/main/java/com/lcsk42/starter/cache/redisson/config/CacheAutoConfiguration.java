@@ -2,7 +2,6 @@ package com.lcsk42.starter.cache.redisson.config;
 
 import com.lcsk42.starter.cache.redisson.core.StringRedisTemplateProxy;
 import com.lcsk42.starter.cache.redisson.serializer.RedisKeySerializer;
-import com.lcsk42.starter.core.util.GeneralPropertySourceFactory;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,14 +11,12 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 @Slf4j
 @AllArgsConstructor
 @AutoConfiguration
 @EnableConfigurationProperties(CacheExtensionProperties.class)
-@PropertySource(value = "classpath:default-cache-redisson.yml", factory = GeneralPropertySourceFactory.class)
 public class CacheAutoConfiguration {
 
     private final CacheExtensionProperties cacheExtensionProperties;
