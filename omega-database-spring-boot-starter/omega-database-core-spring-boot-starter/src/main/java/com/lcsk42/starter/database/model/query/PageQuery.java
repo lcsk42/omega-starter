@@ -4,16 +4,13 @@ package com.lcsk42.starter.database.model.query;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldNameConstants;
-import lombok.experimental.SuperBuilder;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.data.domain.Sort;
 
 @Data
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldNameConstants
@@ -31,7 +28,6 @@ public class PageQuery extends SortQuery {
     /**
      * 页码
      */
-    @Builder.Default
     @Schema(description = "页码", example = "1")
     @Min(value = 1, message = "页码最小值为 {value}")
     private Long current = DEFAULT_PAGE;
@@ -39,7 +35,6 @@ public class PageQuery extends SortQuery {
     /**
      * 每页条数
      */
-    @Builder.Default
     @Schema(description = "每页条数", example = "10")
     @Range(min = 1, max = 1000, message = "每页条数（取值范围 {min}-{max}）")
     private Long size = DEFAULT_SIZE;

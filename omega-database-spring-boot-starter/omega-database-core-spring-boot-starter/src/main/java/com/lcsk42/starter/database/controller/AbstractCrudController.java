@@ -183,7 +183,7 @@ public abstract class AbstractCrudController<S extends CrudService<V, D, Q, C>, 
     @CrudApi(Api.DICT)
     @Operation(summary = "查询字典列表", description = "查询字典列表（下拉选项等场景）")
     @GetMapping("/dict")
-    public List<LabelValueResp<?>> dict(@Valid Q query, @Valid SortQuery sortQuery) {
+    public List<LabelValueResp<Object>> dict(@Valid Q query, @Valid SortQuery sortQuery) {
         return getBaseService().dict(query, sortQuery);
     }
 
