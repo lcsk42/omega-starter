@@ -51,12 +51,13 @@ public interface BaseEnum<T> {
      * @param enumClass   要搜索的枚举类
      * @return 匹配的枚举常量，如果未找到则返回 null
      */
-    static <E extends Enum<E> & BaseEnum<?>> E fromDescription(String description, Class<E> enumClass) {
+    @SuppressWarnings("rawtypes,unchecked")
+    static <E extends Enum<E> & BaseEnum> E fromDescription(String description, Class<?> enumClass) {
         Objects.requireNonNull(enumClass, "Enum class cannot be null");
 
-        for (E enumConstant : enumClass.getEnumConstants()) {
-            if (Objects.equals(enumConstant.getDescription(), description)) {
-                return enumConstant;
+        for (Object enumConstant : enumClass.getEnumConstants()) {
+            if (enumConstant instanceof BaseEnum<?> baseEnum && Objects.equals(baseEnum.getDescription(), description)) {
+                return (E) enumConstant;
             }
         }
         return null;

@@ -93,7 +93,13 @@ public final class LocalDateTimeUtil {
      */
     public static final DateTimeFormatter BASIC_ISO_DATE_FORMATTER;
 
+    /**
+     * 标准日期格式：yyyyMMddHHmmss
+     */
+    public static final DateTimeFormatter PURE_DATETIME_PATTERN;
+
     static {
         BASIC_ISO_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
+        PURE_DATETIME_PATTERN = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
     }
 }

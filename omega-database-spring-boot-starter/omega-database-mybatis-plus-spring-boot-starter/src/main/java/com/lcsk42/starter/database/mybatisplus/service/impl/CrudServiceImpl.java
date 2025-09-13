@@ -20,6 +20,7 @@ import com.lcsk42.starter.database.mybatisplus.module.page.PageResp;
 import com.lcsk42.starter.database.mybatisplus.module.po.BasePO;
 import com.lcsk42.starter.database.mybatisplus.util.QueryWrapperHelper;
 import com.lcsk42.starter.database.service.CrudService;
+import com.lcsk42.starter.excel.fastexcel.util.ExcelUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
@@ -154,7 +155,7 @@ public class CrudServiceImpl<M extends BaseMapper<P>, P extends BasePO, V, D, Q,
     @Override
     public void export(Q query, SortQuery sortQuery, HttpServletResponse response) {
         List<D> list = this.list(query, sortQuery, mapStructConverter::convertD);
-        // todo: 增加 excel 的处理
+        ExcelUtil.export(list, "导出数据", detailClass, response);
     }
 
     @Override

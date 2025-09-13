@@ -37,5 +37,11 @@
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
         </dependency>
+
+        <!-- Fast Excel: 快速处理 excel  -->
+        <dependency>
+            <groupId>com.lcsk42</groupId>
+            <artifactId>omega-excel-fastexcel-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 </project>
