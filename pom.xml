@@ -41,6 +41,7 @@
         <module>omega-validation-spring-boot-starter</module>
         <module>omega-web-spring-boot-starter</module>
         <module>omega-cache-spring-boot-starter</module>
+        <module>omega-database-spring-boot-starter</module>
     </modules>
 
     <properties>

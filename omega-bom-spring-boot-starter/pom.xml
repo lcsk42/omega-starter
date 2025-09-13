@@ -64,6 +64,20 @@
                 <artifactId>omega-cache-redisson-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!-- 数据库 核心模块 -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-database-core-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 数据库 Mybatis Plus -->
+            <dependency>
+                <groupId>com.lcsk42</groupId>
+                <artifactId>omega-database-mybatis-plus-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

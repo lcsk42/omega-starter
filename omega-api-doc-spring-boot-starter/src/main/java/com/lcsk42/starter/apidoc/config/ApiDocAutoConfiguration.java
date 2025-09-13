@@ -40,9 +40,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * API 文档自动配置
- *
- * @author Charles7c
- * @since 1.0.0
  */
 @Slf4j
 @EnableWebMvc

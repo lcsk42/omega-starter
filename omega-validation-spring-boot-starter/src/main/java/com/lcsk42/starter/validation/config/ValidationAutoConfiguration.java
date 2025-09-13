@@ -11,9 +11,6 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 /**
  * JSR 303 校验器自动配置
- *
- * @author Charles7c
- * @since 2.3.0
  */
 @Slf4j
 @AutoConfigureBefore

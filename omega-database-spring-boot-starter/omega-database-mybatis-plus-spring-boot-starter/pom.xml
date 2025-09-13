@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lcsk42</groupId>
+        <artifactId>omega-database-spring-boot-starter</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>omega-database-mybatis-plus-spring-boot-starter</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>Omega Starter 数据库模块 - MyBatis Plus</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lcsk42</groupId>
+            <artifactId>omega-database-core-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- MyBatis Plus: MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，简化开发、提高效率 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+
+        <!-- MyBatis Plus JSQLParser: 基于 JSQLParser 的 SQL 解析工具，用于在 MyBatis-Plus 中动态解析和操作 SQL 语句，支持条件拼接、性能分析等高级功能 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-jsqlparser</artifactId>
+        </dependency>
+
+        <!-- P6Spy: SQL 性能分析组件 -->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+        </dependency>
+    </dependencies>
+</project>

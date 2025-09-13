@@ -38,10 +38,6 @@ import java.util.TimeZone;
 
 /**
  * Jackson 自动配置
- *
- * @author Charles7c
- * @author Jasmine
- * @since 1.0.0
  */
 @Slf4j
 @AllArgsConstructor
